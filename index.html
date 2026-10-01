@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Classic Media China — Series y películas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#0f0d0c;--panel:#1b1816;--text:#f3ede6;--muted:#a79d93;--accent:#e8b84a;--gold:#e8b84a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;min-height:100%}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;gap:20px;padding:14px 4vw 44px;background:linear-gradient(to bottom,rgba(0,0,0,.92) 0%,rgba(0,0,0,.6) 45%,rgba(0,0,0,.2) 80%,rgba(0,0,0,0) 100%)}
+.logo{display:flex;align-items:center;gap:11px;color:var(--text);text-decoration:none;flex:0 0 auto}
+.wm{display:flex;flex-direction:column;line-height:1;white-space:nowrap}
+nav{display:flex;gap:22px;font-size:14px;color:var(--muted);overflow-x:auto;margin-left:auto}
+nav a{color:inherit;text-decoration:none;white-space:nowrap}nav a{padding-bottom:4px;border-bottom:2px solid transparent}nav a:hover{color:var(--text)}nav a.on{color:var(--gold);border-bottom-color:var(--gold)}
+@media (max-width:640px){header{flex-wrap:wrap;gap:10px 14px}nav{order:3;width:100%}}
+.w1{font-family:"Montserrat","Poppins","Segoe UI",system-ui,sans-serif;font-weight:800;font-size:clamp(12px,3.2vw,15px);letter-spacing:.06em;text-transform:uppercase}
+.w2{font-family:"Montserrat","Poppins","Segoe UI",system-ui,sans-serif;font-weight:800;font-size:clamp(8px,2vw,10px);letter-spacing:.3em;margin-top:3px;background:linear-gradient(90deg,#f6d27a,#e8b84a 45%,#c58b2a);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+input:focus,button:focus-visible,.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hero{min-height:62vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 4vw 48px;margin-top:-95px;
+background:radial-gradient(ellipse at 85% 15%,rgba(232,184,74,.30) 0,transparent 42%),radial-gradient(ellipse at 75% 30%,#c4431a 0,transparent 55%),linear-gradient(160deg,#3b1a12,#0f0d0c 85%)}
+.hero h1{background:linear-gradient(90deg,#f3ede6,#f6d27a 60%,#c58b2a);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-family:Georgia,serif;font-size:clamp(40px,8vw,84px);margin:0 0 10px;line-height:1}
+.hero p{max-width:52ch;color:#d8cfc6;line-height:1.5;margin:0 0 22px}
+.btns{display:flex;gap:10px}
+button{font:inherit;font-weight:700;border:0;border-radius:4px;padding:10px 22px;cursor:pointer}
+.play{background:linear-gradient(135deg,#f6d27a,#c58b2a);color:#2a1606}.more{background:rgba(255,255,255,.18);color:var(--text)}
+button:hover{opacity:.85}
+main{padding:0 0 60px}
+section{margin-top:26px}
+h2{font-size:18px;margin:0 4vw 10px;font-weight:600;border-left:3px solid var(--gold);padding-left:10px}
+.row{display:flex;gap:8px;overflow-x:auto;padding:6px 4vw 14px;scroll-snap-type:x proximity}
+.card{flex:0 0 auto;width:min(44vw,210px);aspect-ratio:2/3;border-radius:5px;position:relative;scroll-snap-align:start;
+display:flex;flex-direction:column;justify-content:flex-end;padding:12px;cursor:pointer;transition:transform .2s;border:0;text-align:left;color:#fff;font:inherit}
+.card:hover{transform:scale(1.06);z-index:2;box-shadow:0 0 0 2px var(--gold)}
+.card b{font-family:Georgia,serif;font-size:19px;line-height:1.1;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.card small{opacity:.85;margin-top:4px}
+.empty{margin:30px 4vw;color:var(--muted)}
+dialog{border:1px solid rgba(232,184,74,.45);border-radius:8px;background:var(--panel);color:var(--text);width:min(560px,92vw);padding:0;overflow:hidden}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+.mh{height:200px;display:flex;align-items:flex-end;padding:18px}
+.mh b{font-family:Georgia,serif;font-size:32px}
+.mb{padding:18px;line-height:1.55}
+.meta{color:var(--gold);font-size:13px;margin-bottom:10px}
+.close{float:right;background:none;color:var(--text);font-size:22px;padding:4px 12px}
+footer{border-top:1px solid rgba(232,184,74,.3);margin:0 4vw;padding:24px 0;color:var(--muted);font-size:12px}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#" aria-label="Classic Media China — inicio"><span class="wm"><span class="w1">CLASSIC MEDIA</span><span class="w2">CHINA</span></span></a>
+  <nav><a class="on" href="#" data-f="all">Inicio</a><a href="#" data-f="Serie">Series</a><a href="#" data-f="Película">Películas</a><a href="#" data-f="lista">Mi lista</a></nav>
+</header>
+<div class="hero">
+  <h1>Cenizas de Mayo</h1>
+  <p>Una familia de panaderos en los Andes descubre que su horno guarda un secreto de tres generaciones. Serie original · 2 temporadas.</p>
+  <div class="btns"><button class="play" id="heroPlay">▶ Reproducir</button><button class="more" id="heroMore">Más información</button></div>
+</div>
+<main id="rows"></main>
+<footer>Classic Media China es un proyecto de demostración. Los títulos y contenidos son ficticios.</footer>
+<dialog id="dlg"><div id="dc"></div></dialog>
+<script>
+const T=[
+["Cenizas de Mayo","Serie","Drama",2025,"#c4431a","#3b1a12","Una familia de panaderos en los Andes descubre un secreto en su horno."],
+["Ruta 7","Película","Acción",2024,"#1f6f8b","#0b2530","Una conductora de camiones cruza el desierto con una carga que nadie debe abrir."],
+["La Última Función","Película","Drama",2023,"#8b3a62","#2a0f1e","Un cine de pueblo vive su noche final con proyección sorpresa."],
+["Mar Adentro Sur","Serie","Aventura",2025,"#2a9d8f","#0a2e2a","Cinco biólogos rastrean una señal sonora en el fondo del océano."],
+["Códice","Serie","Misterio",2024,"#6a4c93","#1b1230","Una archivista descifra cartas que parecen escritas por ella misma."],
+["Dos Veranos","Película","Romance",2022,"#e9a23b","#3a2606","Dos amigos se reencuentran en el mismo pueblo, diez años después."],
+["Frío Total","Serie","Suspenso",2026,"#4a7fb5","#0d1a2b","Una estación polar queda sin señal y el equipo empieza a desconfiar."],
+["Casa Tomada","Película","Terror",2023,"#7a1f2b","#1e070b","Una mudanza revela que la casa ya tenía inquilinos."],
+["Pan y Circo","Serie","Comedia",2024,"#d9663a","#3a1708","Un circo en quiebra intenta salvarse con un concurso de cocina."],
+["Neón Lento","Película","Ciencia ficción",2025,"#3bb273","#0a2a1a","En una ciudad que nunca duerme, un técnico descubre una hora que no existe."],
+["Los Cartógrafos","Serie","Aventura",2023,"#b5651d","#2d1706","Dos hermanas heredan un mapa que cambia cada vez que lo miran."],
+["Voz de Fondo","Película","Documental",2024,"#5c6b73","#14191c","Doce locutores de radio rural cuentan cómo suena un país."]
+];
+const rowsDef=[["Tendencias ahora",[0,3,6,9,1,4]],["Series para maratonear",[0,3,4,6,8,10]],["Películas para esta noche",[1,2,5,7,9,11]],["Aventura y misterio",[3,4,10,6,1,9]]];
+let fav=new Set(),filter="all",query="";
+const $=s=>document.querySelector(s),rows=$("#rows");
+function card(i){const t=T[i];return `<button class="card" data-i="${i}" style="background:linear-gradient(200deg,${t[4]},${t[5]})"><b>${t[0]}</b><small>${t[1]} · ${t[3]}</small></button>`}
+function visible(i){const t=T[i];if(query&&!t[0].toLowerCase().includes(query))return false;if(filter==="lista")return fav.has(i);if(filter==="Serie"||filter==="Película")return t[1]===filter;return true}
+function render(){let h="";for(const [name,ids] of rowsDef){const v=ids.filter(visible);if(v.length)h+=`<section><h2>${name}</h2><div class="row">${v.map(card).join("")}</div></section>`}
+rows.innerHTML=h||`<p class="empty">${filter==="lista"?"Tu lista está vacía. Abre un título y elige Agregar a mi lista.":"No hay títulos que coincidan con tu búsqueda."}</p>`}
+function open(i){const t=T[i];$("#dc").innerHTML=`<div class="mh" style="background:linear-gradient(200deg,${t[4]},${t[5]})"><b>${t[0]}</b></div><div class="mb"><button class="close" aria-label="Cerrar">×</button><div class="meta">${t[1]} · ${t[2]} · ${t[3]}</div><p>${t[6]}</p><div class="btns"><button class="play" id="mp">▶ Reproducir</button><button class="more" id="ml">${fav.has(i)?"✓ En mi lista":"+ Agregar a mi lista"}</button></div></div>`;
+$("#dlg").showModal();$("#ml").onclick=()=>{fav.has(i)?fav.delete(i):fav.add(i);open(i);render()};$("#mp").onclick=()=>{$("#mp").textContent="Reproduciendo… (demo)"};$(".close").onclick=()=>$("#dlg").close()}
+rows.addEventListener("click",e=>{const c=e.target.closest(".card");if(c)open(+c.dataset.i)});
+$("#dlg").addEventListener("click",e=>{if(e.target===$("#dlg"))$("#dlg").close()});
+$("#heroMore").onclick=$("#heroPlay").onclick=()=>open(0);
+document.querySelectorAll("nav a").forEach(a=>a.onclick=e=>{e.preventDefault();document.querySelectorAll("nav a").forEach(x=>x.classList.remove("on"));a.classList.add("on");filter=a.dataset.f;render()});
+render();
+</script>
+</body>
+</html>
